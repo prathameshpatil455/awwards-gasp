@@ -7,13 +7,13 @@ import AnimatedTitle from "./AnimatedTitle";
 const FloatingImage = () => {
   const frameRef = useRef(null);
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    const { clientX, clientY } = event;
     const element = frameRef.current;
 
     if (!element) return;
 
-    const rect = element.getBoundingClientRect();
+    const rect = (element as HTMLElement).getBoundingClientRect();
     const xPos = clientX - rect.left;
     const yPos = clientY - rect.top;
 

@@ -3,5 +3,9 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,      // Skip type checking of declaration files (e.g., .d.ts)
+    "noEmitOnError": false     // Allow emitting JavaScript even if there are type errors
+  }
 }

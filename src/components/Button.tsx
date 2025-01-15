@@ -1,6 +1,20 @@
 import clsx from "clsx";
 
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
+interface ButtonProps {
+  id: string;
+  title: string;
+  rightIcon?: JSX.Element | null;
+  leftIcon?: JSX.Element | null;
+  containerClass: string;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  id,
+  title,
+  rightIcon,
+  leftIcon,
+  containerClass,
+}) => {
   return (
     <button
       id={id}

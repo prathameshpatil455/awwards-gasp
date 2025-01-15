@@ -5,7 +5,15 @@ import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+interface AnimatedTitleProps {
+  title: string;
+  containerClass: string;
+}
+
+const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
+  title,
+  containerClass,
+}) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
